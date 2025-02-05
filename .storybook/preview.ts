@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/vue3";
-import { themes } from "@storybook/theming";
 import "../src/tailwind.css";
+import theme from "./theme";
 
 const preview: Preview = {
   parameters: {
@@ -11,7 +11,7 @@ const preview: Preview = {
       },
     },
     docs: {
-      theme: themes.dark,
+      theme: theme,
     },
   },
 };

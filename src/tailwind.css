@@ -53,8 +53,8 @@
 
 @layer base {
   :root {
-    --background: var(--color-spacecadet);
-    --foreground: 240 10% 3.9%;
+    --background: var(--color-primary-100);
+    --foreground: var(--color-primary-400);
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;

@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     style: {
       control: "select",
-      options: ["primary", "secondary", "outline"],
+      options: ["primary", "secondary", "outline", "ghost"],
     },
     size: {
       control: "select",
@@ -20,7 +20,7 @@ const meta = {
     },
   },
   args: {
-    style: "default",
+    style: "secondary",
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     onClick: fn(),
   },
@@ -35,15 +35,28 @@ type Story = StoryObj<typeof meta>;
  */
 export const Primary: Story = {
   args: {
-    style: "default",
     label: "Button",
+    style: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    style: "default",
     label: "Button",
+    style: "secondary",
+  },
+};
+
+export const Outline: Story = {
+  args: {
+    label: "Button",
+    style: "outline",
+  },
+};
+export const Ghost: Story = {
+  args: {
+    label: "Button",
+    style: "ghost",
   },
 };
 
