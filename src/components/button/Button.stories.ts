@@ -10,20 +10,19 @@ const meta = {
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   argTypes: {
-    style: {
+    variant: {
       control: "select",
       options: ["primary", "secondary", "outline", "ghost"],
     },
-    size: {
-      control: "select",
-      options: ["small", "medium", "large"],
-    },
   },
   args: {
-    style: "secondary",
+    variant: "primary",
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     onClick: fn(),
   },
+  decorators: [
+    () => ({ template: '<div style="margin: 3em;"><story/></div>' }),
+  ],
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -36,40 +35,26 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     label: "Button",
-    style: "primary",
+    variant: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
     label: "Button",
-    style: "secondary",
+    variant: "secondary",
   },
 };
 
 export const Outline: Story = {
   args: {
     label: "Button",
-    style: "outline",
+    variant: "outline",
   },
 };
 export const Ghost: Story = {
   args: {
     label: "Button",
-    style: "ghost",
-  },
-};
-
-export const Large: Story = {
-  args: {
-    label: "Button",
-    size: "large",
-  },
-};
-
-export const Small: Story = {
-  args: {
-    label: "Button",
-    size: "small",
+    variant: "ghost",
   },
 };

@@ -13,6 +13,12 @@ const preview: Preview = {
     docs: {
       theme: theme,
     },
+    backgrounds: {
+      values: [
+        { name: "Dark", value: "#061433" },
+        { name: "Light", value: "#1c2d4e" },
+      ],
+    },
   },
 };
 

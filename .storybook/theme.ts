@@ -1,7 +1,7 @@
 import { create } from "@storybook/theming";
 
 export default create({
-  base: "dark",
+  base: "light",
   //
   //   colorPrimary: "#1c2d4e",
   //   colorSecondary: "#585C6D",
